@@ -1,4 +1,4 @@
-package springmvctp.presentation;
+/*package springmvctp.presentation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,4 +28,4 @@ public class RegistrationController {
         clientService.addClient(client);
         return "redirect:/login"; // Rediriger vers la page de connexion après l'inscription
     }
-}
+}*/

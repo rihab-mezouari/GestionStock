@@ -1,4 +1,4 @@
-package springmvctp.service.Iservice;
+/*package springmvctp.service.Iservice;
 
 import springmvctp.dao.entities.Client;
 import java.util.List;
@@ -10,4 +10,4 @@ public interface clientntService {
     void updateClient(Client client);
     List<Client> getAllClients();
     Client getClientByEmail(String email); // Nouvelle méthode pour récupérer un client par email
-}
+}*/

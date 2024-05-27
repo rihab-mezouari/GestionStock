@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 @AllArgsConstructor
 @Controller
 public class ControllerFournisseur {
-    
+
     private final IServiceFournisseur fournisseurService;
 
     @GetMapping("/listerFournisseurs")
@@ -48,6 +48,10 @@ public class ControllerFournisseur {
     @GetMapping("/modifierFournisseur/{id}")
     public String getModifierFournisseurForm(@PathVariable("id") Integer id, Model model) {
         Fournisseur fournisseur = fournisseurService.rechercherFournisseur(id);
+        if (fournisseur == null) {
+            // Handle case where fournisseur is not found
+            return "redirect:/listerFournisseurs";
+        }
         model.addAttribute("fournisseur", fournisseur);
         return "fournisseur/formmodifier";
     }

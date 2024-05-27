@@ -1,4 +1,4 @@
-package springmvctp.presentation;
+/*package springmvctp.presentation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,4 +34,4 @@ public class LoginController {
             return "redirect:/login?error";
         }
     }
-}
+}*/
