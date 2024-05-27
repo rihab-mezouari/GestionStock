@@ -44,14 +44,9 @@ public class ControllerFournisseur {
             return "redirect:/listerFournisseurs";
         }
     }
-
     @GetMapping("/modifierFournisseur/{id}")
     public String getModifierFournisseurForm(@PathVariable("id") Integer id, Model model) {
         Fournisseur fournisseur = fournisseurService.rechercherFournisseur(id);
-        if (fournisseur == null) {
-            // Handle case where fournisseur is not found
-            return "redirect:/listerFournisseurs";
-        }
         model.addAttribute("fournisseur", fournisseur);
         return "fournisseur/formmodifier";
     }
@@ -65,6 +60,7 @@ public class ControllerFournisseur {
             return "redirect:/listerFournisseurs";
         }
     }
+
 
     @PostMapping("/supprimerFournisseur/{id}")
     public String supprimerFournisseur(@PathVariable("id") Integer id) {
